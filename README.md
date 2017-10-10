@@ -1,14 +1,8 @@
-# SDE-Angular-Generic
+# Kinvey-Training
 
 This app is written using the Ionic Framework, which leverages the Kinvey AngularJS libraries to communicate with the backend.
 
-This app demonstrates the following functionality.
-Authentication with KinveyAuth or Mobile Identity Connect.  It is possible to show changing the identity provider on the backend to connect to different authentication systems without changing a single line of code on the client.
-Interfacing with the Kinvey Datastore.  The products collection contains a list of Kinvey products for sales people to showcase to their customers.  The Datastore can be created on the fly on the backend, data can be imported, and that data is immediately available within the app.  With the product collection you can show GET and GET by query.  Elsewhere in the app, we can also show INSERT (on a different collection).
-Offline access.  Once the products collection is imported, you can put your device in airplane mode and show that the data is still accessible and searchable while offline.  On various tabs, you can also show autogeneration of records and syncing to the backend/
-Filestore - you can put PDF and other file content in the filestore and see them streamed to the client.  FIXME:  Currently, if you open a file, you have to close the app and reopen.  Unlike in the browser, that view doesn't have a back button.
-accounts collection - show importing the data and then "flip the switch" to either SFDC, REST, SQL Server, or (with a little BL) SAP.
-tasks Collection - Import data and then you can show, can connect to sharepoint
+This is the front end code for the Kinvey Developer Training. Please follow the instructions below to set up your environment before attending a training.
 
 ### Prerequisites
 * Install nodejs https://nodejs.org/en/
@@ -46,9 +40,5 @@ CHANGES
 - clarified installation of plugin
 - updated sdk to 3.4.2
 
-11/11/2016
-- added support for pull-to-refresh on products screen
-- improved the way we display files
-- fixed drilldown on accounts screen
-- minor UI fixes
+
 
