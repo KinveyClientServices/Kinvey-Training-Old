@@ -1,0 +1,48 @@
+<ion-view view-title="Policy Review Reminder">
+ <ion-nav-bar class="bar-acme">
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content>
+    <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/insicon.png">
+    <h2>Policy Coverage Review</h2>
+    <p>sign up for email reminders</p>
+  </div>
+
+  <div class="item item-body">
+    <!--<img class="full-image" src="img/acme2.png">-->
+    <p>
+      The single most common mistake that most policyholders make is not reviewing their coverage often enough.  Policyholders mistakenly think that these reviews are just opportunities for the insurance companies to charge more.  The fact of the matter is that over three quarters of the reviews that we conduct at Acme Insurance end up saving the customer money.
+    </p>
+    
+  </div>
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+        <input type="text" placeholder="Recipient Name" id="myrecipientname">
+      </label></div>
+      <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-email placeholder-icon"></i>
+      <input type="text" placeholder="Email" id="sendtoemail">
+    </label>
+    <button class="button button-small" ng-click="sendme();">
+      Submit
+    </button>
+  </div>
+
+
+  
+
+</div>
+  </ion-content>
+  
+  <div class="bar bar-footer bar-stable">
+  <div class="title"></div>
+</div>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view view-title="Service Techs">
+    <ion-nav-bar class="bar-harley" title="Prospects">
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+          <h1 class="title">Service Techicians</h1>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+     <!--<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>-->
+      <ion-content class="has-header padding">
+
+  
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="tech in servicetechs" type="item-text-wrap">
+        <h2>{{tech.FIRST_NAME}} {{tech.LAST_NAME}}</h2>
+    <p>{{tech.MAIL_ID}}</p>
+        <i class="icon ion-wrench icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button" ng-click="doRefresh();">Refresh</button>
+  </div>
+  
+  </div>
+</ion-footer-bar>
+</ion-view>

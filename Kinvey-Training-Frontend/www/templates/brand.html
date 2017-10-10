@@ -1,0 +1,37 @@
+<ion-view view-title="Brand">
+    <ion-nav-bar brackground-color="#ff0000" title="Hello">
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+          <h1 class="title">Brand</h1>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+     
+      <ion-content class="has-header padding">
+
+  
+    <ion-list>
+      <ion-item class="item-remove-animate  item-icon-right" ng-repeat="brand in mybrand" type="item-text-wrap">
+      <div class="card">
+      <h2>Brand Tagline:</h2>
+        <h2>{{brand.headerlabel}}</h2>
+      </div>
+      <div class="card">
+      	<h2>Brand Logo</h2>
+    <img class="full-image" src="{{brand.logo}}"></div>
+    <div class="card" background-color="#ff0000" style="background-color:{{brand.prcolor}};height:100px">
+    <h1>Brand Color</h1>
+    
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button" ng-click="doRefreshBrand();">Refresh</button>
+  </div>
+  
+  </div>
+</ion-footer-bar>
+</ion-view>

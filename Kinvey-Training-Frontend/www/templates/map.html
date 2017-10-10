@@ -1,0 +1,28 @@
+<ion-view view-title="Map">
+    <ion-nav-bar class="bar-kinvey" title="Prospects">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+            <h1 class="title">Map</h1>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    
+    <!--<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>-->
+    <ion-content class="has-header" ng-controller="MapCtrl" ng-init="initialize()">
+    <div class="bar bar-header bar-subheader">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Range" id="myrange">
+            </label>
+        </div>
+    </div>
+        <div id="mymap" data-tap-disabled="true"></div>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-stable">
+        <div class="buttons">
+            <button class="button" ng-click="doRefresh();">Refresh</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

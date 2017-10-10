@@ -1,0 +1,24 @@
+<ion-view cache-view="false" view-title="Prescriptions">
+  <ion-content class="has-header padding">
+    <ion-list>
+      <!--<ion-item class="item-remove-animate item-leftitem-icon-right pane" ng-repeat="drug in drugs" type="item-text-wrap">
+      <center><img ng-src="img/{{product.thumbimg}}" height="100">
+       <div class="item item-text-wrap">
+        <h2 class="item-text-wrap"><b>{{drug.Product.Name}}</b></h2>
+        <h2>$index</h2></div>-->
+
+
+          <ion-item class="item-remove-animate  item-icon-right" ng-repeat="drug in drugs" type="item-text-wrap">
+                <h2>{{drug.Product.Name}}</h2>
+                <p>{{drug.Dose.Quantity}} {{drug.Dose.Units}}</p>
+                <p>Every {{drug.Frequency.Period}} {{drug.Frequency.Unit}}</p>
+                <p>Route: {{drug.Route.Name}}</p>
+                <i class="icon ion-ios-flask icon-accessory"></i>
+            </ion-item>
+
+      
+       
+      
+    </ion-list>
+  </ion-content>
+</ion-view>

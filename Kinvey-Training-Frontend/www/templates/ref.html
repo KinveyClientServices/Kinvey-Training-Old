@@ -1,0 +1,32 @@
+<ion-view view-title="References">
+ <ion-nav-bar title="References" ng-style="{'background-color': primarycolor}">
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+          <h1 class="title">References</h1>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+  <ion-content  class="has-header padding">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-left" ng-repeat="file in files" type="item-text-wrap" href="#/menu/video/{{file._id}}"><!--href="{{file._downloadURL}}">-->
+        <!--<img ng-src="{{file.face}}">-->
+        
+        <h2>{{file.prettyname}}</h2>
+        <i class="icon {{file.icon}} icon-accessory"></i>
+        <!--<p>{{file.icon}}</p>-->
+       <!-- <i class="icon ion-chevron-right icon-accessory"></i>-->
+
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+   <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button" ng-click="doRefreshRef();">Refresh</button>
+  </div>
+  
+  </div>
+</ion-footer-bar>
+</ion-view>

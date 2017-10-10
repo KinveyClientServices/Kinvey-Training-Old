@@ -1,0 +1,41 @@
+<ion-view title="LET'S KEEP IN TOUCH">
+    <ion-nav-bar title="Hello" ng-style="{'background-color': primarycolor}">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+            <h1 class="title">My Todos</h1>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="has-header padding">
+        <div class="list">
+            <div class="list card">
+                <div class="item item-thumbnail-left item-text-wrap">
+                    <img src="img/list.png">
+                    <br>
+                    <h2>My Personal</h2>
+                    <p>To Do List</p>
+                </div>
+                <label class="item item-input item-thumbnail-left">
+                    <i class="icon ion-ios-list-outline placeholder-icon"></i>
+                    <input type="text" placeholder="Task" id="task">
+                </label>
+                <label class="item item-input item-thumbnail-left">
+                    <i class="icon ion-ios-list-outline placeholder-icon"></i>
+                    <input type="text" placeholder="Due Date" id="duedate">
+                </label>
+                <li class="item item-checkbox bar-energized">
+                    <label class="checkbox">
+                        <input type="checkbox" id="completed">
+                    </label>
+                    Completed?
+                </li>
+            </div>
+            <button class="button icon-left ion-camera" ng-click="picMe()">Photo</button>
+            <button class="button icon-left ion-ios-cloud-upload" ng-click="insertme()">Save</button>
+            <button class="button icon-left ion-clipboard" ng-click="reportMe()">Report</button>
+            <img id="myImage" width="100%"></img>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-kinvey">
+        <div class="title"></div>
+    </div>
+</ion-view>

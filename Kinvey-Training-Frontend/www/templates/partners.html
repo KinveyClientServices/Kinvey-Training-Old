@@ -1,0 +1,32 @@
+<ion-view view-title="{{accountsname}}">
+    <ion-nav-bar title="Hello" ng-style="{'background-color': primarycolor}">
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+          <h1 class="title">Let's Keep in Touch</h1>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+     <!--<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>-->
+      <ion-content class="has-header padding">
+
+  
+    <ion-list>
+      <ion-item class="item-remove-animate  item-icon-right" ng-repeat="account in accounts" type="item-text-wrap" href="#/menu/partner/{{account._id}}">
+        <h2>{{account.accountname}}</h2>
+    <p>{{account.accountcompany}}</p>
+        <i class="icon ion-android-contact icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button" ng-click="doRefresh();">Refresh</button>
+  </div>
+  
+  </div>
+</ion-footer-bar>
+</ion-view>

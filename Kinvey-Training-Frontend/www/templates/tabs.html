@@ -1,0 +1,39 @@
+<ion-nav-bar ng-style="{'background-color': primarycolor}">
+        <ion-nav-back-button class="button-icon ion-arrow-left-c">
+        </ion-nav-back-button>
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+        </ion-nav-buttons>
+
+        <!--<ion-nav-buttons side="right">
+          <button class="button button-icon button-clear ion-compose" ng-click="modal.show()"></button>
+        </ion-nav-buttons>-->
+    </ion-nav-bar>
+<ion-tabs class="tabs-icon-top" ng-style="mystyle">
+
+
+  <!-- Home Tab -->
+  <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/menu/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Companies Tab -->
+  <ion-tab title="{{productsname}}" icon-off="ion-briefcase" icon-on="ion-briefcase" href="#/menu/tab/products">
+    <ion-nav-view name="tab-products"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Search Tab -->
+  <ion-tab title="Search" icon-off="ion-search" icon-on="ion-search" href="#/menu/tab/search">
+    <ion-nav-view name="tab-search"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Login Tab -->
+  <ion-tab title="Login" icon-off="ion-ios-locked" icon-on="ion-ios-unlocked" href="#/menu/tab/account">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>

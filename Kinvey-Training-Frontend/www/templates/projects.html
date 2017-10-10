@@ -1,0 +1,39 @@
+<ion-view view-title="Projects">
+    <ion-nav-bar title="Projects" ng-style="{'background-color': primarycolor}">
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+          <h1 class="title">Projects</h1>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+     
+      <ion-content class="has-header padding">
+
+  
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-left" ng-repeat="task in tasks" type="item-text-wrap">
+       <h2><b>Task: {{task.action}}</b></h2>
+    
+        <i class="icon ion-ios-calendar icon-ios-calendar"></i>
+        <!--<img ng-src="{{project.LogoIcon}}">-->
+        <h2>Due Date: {{task.duedate}}</h2>
+        <!--<p>QT: {{project.qt}}</p>
+        <p>Abnormal: {{project.abnormalecg}}</p>-->
+       <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="task.completed" ng-true-value="true" ng-false-value="false">
+     </label>
+     Complete
+  </li>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button" ng-click="doRefresh();">Refresh</button>
+  </div>
+  
+  </div>
+</ion-footer-bar>
+</ion-view>

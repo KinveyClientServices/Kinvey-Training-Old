@@ -1,0 +1,52 @@
+<ion-view title="Account">
+    <ion-content class="login-background">
+        <div class="padding">
+        <!--<h4>Login</h4>
+        <div class="block-input-label">
+            <label id="login-email-label" ng-class="{'error-style': submittedEmail}" for="login-email">Email:</label>
+            <input id="login-email" type="email" name="email" ng-class="{'error-style': submittedEmail}" ng-model="userData.email"
+                   placeholder="john@example.com"
+                   required/>
+            <span class="login" id="login-span"  ng-show="submittedEmail">A valid email address is required.</span>
+        </div>
+        <div>
+            <label class="password-label" ng-class="{'error-style': submittedPassword}" for="login-password">Password:</label>
+            <input id="login-password" class="password-input" type="password" name="password" ng-model="userData.password" ng-class="{'error-style': submittedPassword}"
+                   placeholder="********" required/>
+            <span class="login"  ng-show="submittedPassword">A password is required.</span>
+        </div>
+        </div>-->
+
+        <div class="list">
+  <label class="item item-input">
+    <span class="input-label">Username</span>
+    <input autocapitalize="none" type="text" ng-model="userData.email">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="userData.password">
+  </label>
+</div>
+        <div class="padding"><br><br>
+            <button class="button button-block kinveybutton" ng-click="validateUserKinvey()">
+                Login with Kinvey Auth
+            </button>
+            <button class="button button-block kinveybutton" ng-click="validateUser()">
+                Login with MIC
+            </button>
+            <span class="error acemtext" ng-show="submittedError">{{errorDescription}}</span>
+        </div>
+        <div class="padding">
+            <button class="button button-block kinveybutton" ng-click="logout()">
+                Logout
+            </button>
+            <span class="error" ng-show="submittedError">{{errorDescription}}</span>
+        </div>
+<div class="padding">
+            <center><u><label ng-click="signUp()">
+                Create new Account
+            </label></u></center>
+            
+        </div>
+    </ion-content>
+</ion-view>                

@@ -1,0 +1,71 @@
+<ion-view title="Patient">
+    <ion-nav-bar title="Patient" ng-style="{'background-color': primarycolor}">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+            <h1 class="title">Patient Info</h1>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="has-header padding">
+        <!-- <div class="list">-->
+        <div class="list card">
+            <div class="item item-thumbnail-left item-text-wrap">
+                <img src="img/icon-health.png">
+                <br>
+                <h2>Patient</h2>
+                <p>Information</p>
+            </div>
+        </div>
+        <div class="list list-inset">
+            <label class="item item-input item-left">
+                <input type="text" align="left" placeholder="MRN" ng-model="patient._id">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Marital Status" ng-model="patient.MaritalStatus">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="First Name" ng-model="patient.FirstName">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Last Name" ng-model="patient.LastName">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Nickname" ng-model="patient.Nickname">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="DOB" ng-model="patient.DOB">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="SSN" ng-model="patient.SSN">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Sex" ng-model="patient.Sex">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Phone Number" ng-model="patient.PhoneNumber.Home">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Street" ng-model="patient.Address.StreetAddress">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="City" ng-model="patient.Address.City">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="State" ng-model="patient.Address.State">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="ZIP" ng-model="patient.Address.ZIP">
+            </label>
+        </div>
+        <!--</div>-->
+        <!--<a class="button button-small kinveybutton" ng-click="searchme();">search</a>-->
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <button class="button" ng-click="searchme();">Search</button>
+    <button class="button icon-left ion-ios-checkmark" ng-click="admitme(patient);">Admit</button>
+    <button class="button icon-left ion-ios-flask" ng-click="drugme(patient);">Medications</button>
+  </div>
+  
+  </div>
+</ion-footer-bar>
+</ion-view>
